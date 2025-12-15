@@ -18,7 +18,7 @@ import json
 # DATABASE CONFIG
 # =========================
 
-DATABASE_URL = "postgresql+psycopg2://user:user123@database-pemweb:5432/webdb"
+DATABASE_URL = "postgresql+psycopg2://user:user123@localhost:5432/mydb"
 
 engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(bind=engine)
@@ -149,3 +149,4 @@ if __name__ == "__main__":
     print(json.dumps([m.to_json() for m in records], indent=2))
 
     session.close()
+
