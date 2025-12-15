@@ -18,6 +18,7 @@ import json
 # DATABASE CONFIG
 # =========================
 
+# Sesuaikan host, port, user, password, dan database sesuai VPS
 DATABASE_URL = "postgresql+psycopg2://user:user123@localhost:5432/mydb"
 
 engine = create_engine(DATABASE_URL, echo=False)
@@ -149,4 +150,3 @@ if __name__ == "__main__":
     print(json.dumps([m.to_json() for m in records], indent=2))
 
     session.close()
-
